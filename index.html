@@ -13,8 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="./assets/resume-CGK6DavC.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/resume-CrqxlAqz.css">
+    <script type="module" crossorigin src="./assets/resume-BczJsXwr.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/resume-CbeakqAZ.css">
   <script>const RESUME = {
   hero: {
     label: '// RESUME / CURRICULUM VITAE',
@@ -251,9 +251,80 @@
     pressureRadius: 300,
   },
 
-  identity: {
-    description: '我是一名热爱创造的全栈工程师，追求技术与设计的完美融合。相信代码不仅是工具，更是表达思想的方式。在每一个项目中，我都致力于找到优雅与效率的平衡点，用技术的力量为用户创造真正的价值。',
-    tags: ['全栈开发', '架构设计', '性能优化', '用户体验', '开源探索', '终身学习'],
+  ossWorks: {
+    subtitle: 'Open Source Contributions',
+    items: [
+      {
+        name: 'vue-motion-kit',
+        description: 'Vue 3 声明式动画工具库，让复杂动效像写 CSS 一样简单',
+        repo: 'https://github.com/sxzseal/vue-motion-kit',
+        tech: ['Vue3', 'TypeScript', 'Animation'],
+        stars: '2.8k',
+        poster: 'https://picsum.photos/seed/vuemotion/600/800',
+        readme: "# vue-motion-kit\n\n> 声明式动画工具库，让 Vue 3 复杂动效变得简单。\n\n## 特性\n\n- **声明式 API** — 用 composition API 描述动画，无需手动管理 `requestAnimationFrame`\n- **物理弹性** — 内置弹簧物理引擎，支持阻尼、质量、刚度参数\n- **手势驱动** — 拖拽、滑动、缩放等手势与动画无缝联动\n- **Tree-shakable** — 按需引入，打包体积最小 3KB gzip\n\n## 安装\n\n```bash\nnpm install vue-motion-kit\n```\n\n## 快速开始\n\n```typescript\nimport { useSpring, useDrag } from 'vue-motion-kit'\n\nconst { x, y } = useSpring({ tension: 170, friction: 26 })\nuseDrag({ x, y }, { rubberband: true })\n```\n\n## 设计理念\n\n动画应该是**可组合的**、**可中断的**、**可逆的**。\n受 react-spring 启发，但完全基于 Vue 3 的响应式系统构建。\n\n## License\n\nMIT"
+      },
+      {
+        name: 'tiny-bundler',
+        description: '从零实现一个 JavaScript 模块打包器，深入理解 Webpack 原理',
+        repo: 'https://github.com/sxzseal/tiny-bundler',
+        tech: ['JavaScript', 'AST', 'Babel'],
+        stars: '1.5k',
+        poster: 'https://picsum.photos/seed/bundler/600/800',
+        readme: "# tiny-bundler\n\n> 300 行代码实现一个 JavaScript 模块打包器。\n\n## 项目简介\n\n这是一个教学项目，旨在帮助开发者理解 Webpack / Rollup 等工具的核心原理。\n\n## 核心功能\n\n- **模块解析** — 通过 AST 分析 `import/export` 依赖关系\n- **依赖图构建** — BFS 遍历构建完整的模块依赖图\n- **代码生成** — 将 ES Modules 转换为浏览器可执行的 IIFE 格式\n- **Tree Shaking** — 基于静态分析移除未使用的导出\n\n## 运行\n\n```bash\nnpm install\nnpm run build   # 打包示例项目\nnpm run test    # 运行测试用例\n```\n\n## 核心流程\n\n1. 从入口文件开始解析 AST\n2. 提取所有 import 语句，递归解析依赖\n3. 构建依赖图 (Dependency Graph)\n4. 按拓扑排序生成最终 bundle\n\n## License\n\nMIT"
+      },
+      {
+        name: 'react-dashboard-starter',
+        description: '企业级中后台模板，开箱即用的权限管理 + 数据看板',
+        repo: 'https://github.com/sxzseal/react-dashboard-starter',
+        tech: ['React', 'Ant Design', 'Zustand'],
+        stars: '3.2k',
+        poster: 'https://picsum.photos/seed/dashboard-starter/600/800',
+        readme: "# react-dashboard-starter\n\n> 企业级中后台开发模板，基于 React 18 + TypeScript + Ant Design 5。\n\n## 功能清单\n\n- **权限系统** — RBAC 角色权限，路由级别 + 按钮级别控制\n- **数据看板** — 基于 ECharts 的实时数据可视化面板\n- **表单引擎** — JSON Schema 驱动的动态表单生成器\n- **主题系统** — CSS 变量 + Design Token，支持一键换肤\n- **国际化** — 完整的 i18n 方案，支持运行时切换语言\n\n## 技术栈\n\n| 类别 | 技术 |\n|------|------|\n| 框架 | React 18 + TypeScript |\n| 状态管理 | Zustand |\n| UI 组件 | Ant Design 5 |\n| 路由 | React Router v6 |\n| 请求 | Axios + React Query |\n| 构建 | Vite 5 |\n\n## 快速开始\n\n```bash\ngit clone https://github.com/sxzseal/react-dashboard-starter\ncd react-dashboard-starter\npnpm install\npnpm dev\n```\n\n## License\n\nMIT"
+      },
+      {
+        name: 'css-motion-gallery',
+        description: '纯 CSS 实现的动效画廊，零 JavaScript 依赖',
+        repo: 'https://github.com/sxzseal/css-motion-gallery',
+        tech: ['CSS', 'HTML', 'Animation'],
+        stars: '920',
+        poster: 'https://picsum.photos/seed/cssmotion/600/800',
+        readme: "# css-motion-gallery\n\n> 纯 CSS 实现的 30+ 高级动效，零 JavaScript。\n\n## 简介\n\n收集并实现各种纯 CSS 动效案例，展示 CSS 的强大能力。每个动效都可以直接复制使用。\n\n## 动效列表\n\n- **3D 卡片翻转** — perspective + rotateY 实现真实 3D 翻转\n- **磁性按钮** — 鼠标靠近时按钮产生磁性吸附效果\n- **液态加载器** — SVG filter + CSS animation 模拟液态效果\n- **视差滚动** — 纯 CSS scroll-driven animation 实现视差\n- **粒子爆炸** — CSS animation + custom properties 模拟粒子效果\n\n## 浏览器兼容性\n\n所有动效均支持现代浏览器 (Chrome 100+, Firefox 100+, Safari 16+)。\n部分效果使用了 CSS Houdini 和 Scroll-driven Animations 新特性。\n\n## 如何使用\n\n每个动效都是独立的 HTML 文件，直接复制到项目中使用。\n\n## License\n\nMIT"
+      },
+      {
+        name: 'node-api-forge',
+        description: '基于 JSON Schema 自动生成 RESTful API 的 Node.js 工具',
+        repo: 'https://github.com/sxzseal/node-api-forge',
+        tech: ['Node.js', 'TypeScript', 'OpenAPI'],
+        stars: '1.1k',
+        poster: 'https://picsum.photos/seed/apiforge/600/800',
+        readme: "# node-api-forge\n\n> 定义 Schema，自动生成完整的 RESTful API。\n\n## 核心理念\n\n**Schema First** — 只需定义数据模型的 JSON Schema，自动获得：\n- CRUD REST API\n- 数据校验中间件\n- TypeScript 类型定义\n- OpenAPI 文档\n\n## 示例\n\n```typescript\nimport { forge } from 'node-api-forge'\n\nconst UserAPI = forge({\n  name: 'User',\n  schema: {\n    name: { type: 'string', required: true },\n    email: { type: 'string', format: 'email' },\n    role: { type: 'string', enum: ['admin', 'user'] },\n  },\n  storage: 'postgres',\n})\n```\n\n## 支持的存储\n\n- PostgreSQL\n- MySQL\n- MongoDB\n- SQLite (开发用)\n\n## License\n\nMIT"
+      },
+      {
+        name: 'markdown-slides',
+        description: '用 Markdown 写幻灯片，实时预览，一键导出 PDF',
+        repo: 'https://github.com/sxzseal/markdown-slides',
+        tech: ['Svelte', 'Markdown', 'PDF'],
+        stars: '680',
+        poster: 'https://picsum.photos/seed/mdslides/600/800',
+        readme: "# markdown-slides\n\n> 用 Markdown 编写幻灯片，专注内容而非排版。\n\n## 特性\n\n- **Markdown 原生** — 用标准 Markdown 语法编写，--- 分隔页面\n- **实时预览** — 左侧编辑，右侧即时渲染\n- **主题切换** — 内置 8 套精心设计的主题\n- **代码高亮** — 支持 50+ 编程语言语法高亮\n- **PDF 导出** — 一键导出为高质量 PDF 文件\n- **演讲者模式** — 独立窗口显示备注和下一页预览\n\n## 语法扩展\n\n```markdown\n---\ntheme: dark\ntransition: fade\n---\n\n# 第一页标题\n\n普通 Markdown 内容\n\n---\n\n# 第二页\n\n- 列表项 1\n- 列表项 2\n```\n\n## 内置主题\n\n| 主题 | 风格 |\n|------|------|\n| default | 简约白底 |\n| dark | 深色模式 |\n| gradient | 渐变背景 |\n| minimal | 极简线条 |\n\n## License\n\nMIT"
+      },
+    ],
+  },
+
+  spiral: {
+    subtitle: 'Scroll to rotate · Click to open',
+    items: [
+      { title: 'Aurora Dashboard',   image: 'https://picsum.photos/seed/spiral-aurora/720/420',   href: '#projects' },
+      { title: 'Nebula Studio',      image: 'https://picsum.photos/seed/spiral-nebula/720/420',   href: '#projects' },
+      { title: 'Pulse Analytics',    image: 'https://picsum.photos/seed/spiral-pulse/720/420',    href: '#projects' },
+      { title: 'Drift Commerce',     image: 'https://picsum.photos/seed/spiral-drift/720/420',    href: '#projects' },
+      { title: 'Helix CMS',          image: 'https://picsum.photos/seed/spiral-helix/720/420',    href: '#projects' },
+      { title: 'Vector Garden',      image: 'https://picsum.photos/seed/spiral-vector/720/420',   href: '#projects' },
+      { title: 'Cascade Engine',     image: 'https://picsum.photos/seed/spiral-cascade/720/420',  href: '#projects' },
+      { title: 'Glow Components',    image: 'https://picsum.photos/seed/spiral-glow/720/420',     href: '#projects' },
+      { title: 'Orbit Notes',        image: 'https://picsum.photos/seed/spiral-orbit/720/420',    href: '#projects' },
+      { title: 'Prism Builder',      image: 'https://picsum.photos/seed/spiral-prism/720/420',    href: '#projects' },
+    ],
   },
 };
 
